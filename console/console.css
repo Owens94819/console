@@ -1,0 +1,239 @@
+
+body,html{
+}
+
+#details{
+  background:rgb(104,140,187);
+  border-left: 5px solid #fff0c6              ;
+  margin: 2px;
+  padding: 3px;
+  color: white;
+  letter-spacing: 2px;
+  word-wrap: break-word;
+  
+}
+summary{
+  outline: none;
+  color: rgb(255,240,198,0.5);
+  letter-spacing: 0 ;
+  font-family: arial;
+  font-weight: 100;
+}
+h-up{
+  color: rgb(63,78,231);
+  font-style: italic;
+  opacity: 0.8;
+  margin-left: 4px;
+  font-weight: 300;
+  
+}
+vn-s{
+color: #855bff;
+}
+s-wp{
+  color: #fff0c6;
+}
+#hu-nimo{
+  opacity: 0.5;
+}
+h-ft{
+  color: rgb(114,72,151);
+  margin-left: 4px;
+  
+}
+h-func{
+  font-size: 13px;
+  color: rgb(94,177,255);
+}
+h-m{
+  color: rgb(255,248,233);
+  font-weight: 700;
+  opacity: 0.7;
+  text-shadow: 0 0 13px #855bff;
+}
+h-nb{
+  color: white;
+  font-style: italic;
+  font-stretch: extra-expanded;
+    font: small-caption;
+}
+true{
+color: yellow;
+}
+false{
+  color:red;
+}
+h-sg{
+  opacity:1;
+  display: flex;
+  padding: 4px 0;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0;
+  border-bottom: 5px solid rgb(255,240,198,0.5)
+}
+h-bl{
+color: white;
+}
+h-ud{
+  color: #ffaa76;
+  font-style: normal;
+}
+h-nl{
+  color: #f2743e;
+  font-style: normal;
+}
+h-stg,h-string{
+  opacity: 1;
+    user-select: all; 
+  color: rgba(0,0,0);
+}
+h-stg{
+  opacity: 0.5;
+}
+h-un{
+  color:green;
+}
+#nimo-enb{
+  user-select: all; 
+}
+#console-wp{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  border-left: 5px solid #fff0c6              ;
+}
+
+nimo-console{
+  display: inline-block;
+  font-size: 80%;
+  width: 100vw;
+  height: 80vh;
+  padding: 0 0;
+  padding-bottom: 19.4vh;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+nimo-text{
+  overflow: hidden;
+  display: inline-block;
+  column-count: 1;
+  margin: 0;
+  padding: 15px;
+  width: 70vw;
+  height: 21px;
+  padding-top: 15px;
+  padding-bottom: 0;
+  outline: none;
+  border: 5px solid rgb(124,181,254);
+  background: rgba(161,203,255,0.8);
+  color: #0070ff;
+  font-weight: 300;
+  font-size: 111%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  resize: none;
+  letter-spacing: 0.5px;
+}
+nimo-btn{
+  padding: 5px 15px;
+  font-size: 111%;
+  outline: none;
+  color: #0070ff;
+  background: rgb(161,203,255);
+  border: 5px solid rgb(124,181,254);
+  height: 21px;
+  cursor: default;
+}
+footer-cl{
+ display: inline-flex;
+ user-select: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgb(255,255,255,0.7);
+  width: 100vw;
+  padding: 5px 2px;
+}
+ip-s[error="error"] {
+ color: red;
+}
+nimo-body{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 400;
+  z-index: 999999;
+  height: 100vh;
+  display: none;
+  overflow: hidden;
+  font-family: Sans-Serif;
+    background: rgb(124,181,254);
+  -webkit-touch-callout: none; 
+-webkit-user-select: none; 
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none; 
+user-select: none; 
+}
+nimo-org{
+  position: fixed;
+  cursor: default;
+  user-select: none;
+  z-index: 9999999;
+  box-shadow: 0 0 25px #768398;
+  bottom: 20%;
+  left: 5%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  line-height: 0;
+  vertical-align: middle;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  overflow: hidden;
+  background: #3e92ff;
+  border: 3px solid rgb(0,102,235);
+  font-size: 100%;
+  transition: 0.1s;
+}
+nimo-org:active{
+  opacity: 0.6;
+  transform: scale(1.5);
+  transition: 0.1s;
+}
+nimo-btn:active{
+  opacity: 0.6;
+}
+@keyframes nimoA {
+  from{
+   transform: scale(0);
+  }
+  to{
+   transform: scale(1);
+}
+}
+@keyframes nimoO {
+  from{
+   transform: scale(1);
+  }
+  to{
+   transform: scale(0);
+}
+}
+
+h-sg,#details,#console-wp{
+border-color: rgb(0, 81, 255);
+border-width: 2px;
+}
+s-wp,summary{
+  color:rgb(170, 224, 255);
+}
