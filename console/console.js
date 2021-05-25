@@ -96,13 +96,28 @@ let Oname = function(x) {
 }
 
 let kp = function($_x, $_key, $_console) {
+if ($_console) {
+    try {
+        var $_x = eval($_x);
+    } catch (e) {
+        var $_name = e.constructor.name;
+        var $msg = e.message;
+        var $new = new cd($msg);
+        $new.ip = 'error';
+        $new.error = $_name;
+return
+    }
+}
+
     if ($_key !== undefined) {
         var $_g = Oname($_x + "")[0];
         var $_g = noLo($_g, $_x);
+
         eval(`nimo$__$storage['${$_g}'] = $_x;`);
+
+
         var $_x = 'nimo$__$storage[\'' + $_g + '\']';
     }
-
     var store = {
         x: $_x,
         key: $_key,
@@ -117,6 +132,7 @@ let kp = function($_x, $_key, $_console) {
     if (store.console === undefined) {
         store.$y = store.y;
     }
+
     if (store.y === "") {
         cd('%nimo', 'wait');
     } else {
@@ -753,7 +769,12 @@ customElements.define('nimo-body', class extends HTMLElement {
    <nimo-console></nimo-console>
     <footer-cl>
     <nimo-text id="nimo-text" contenteditable/></nimo-text>
-    <nimo-btn></nimo-btn>
+<btn>
+
+<nimo-btn-2 id=nimo-btn></nimo-btn-2>
+<nimo-btn-1 id=nimo-btn></nimo-btn-1>
+
+</btn>
     </footer-cl>
   `;
         this.innerHTML = html;
@@ -772,12 +793,27 @@ customElements.define('h-nb', class extends HTMLElement {
     }
 }
 );
-customElements.define('nimo-btn', class extends HTMLElement {
+customElements.define('nimo-btn-1', class extends HTMLElement {
     constructor() {
         super();
         this.innerHTML = "clear";
         this.onclick = function() {
             btn_nimo();
+        }
+    }
+}
+);
+
+customElements.define('nimo-btn-2', class extends HTMLElement {
+    constructor() {
+        super();
+        this.innerHTML = "Run";
+        this.onclick = function() {
+var txt = document.getElementById('nimo-text')
+var x_ = txt.innerText;
+         //   btn_nimo();
+         kp(x_, 'enter',true);
+//console.log(eval())
         }
     }
 }
@@ -817,6 +853,7 @@ customElements.define('nimo-text', class extends HTMLElement {
                     }
                 }
             }
+      //this.innerHTML = v;
         }
         this.focus();
     }
